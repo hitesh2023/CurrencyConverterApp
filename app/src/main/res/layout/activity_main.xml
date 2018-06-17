@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.amruthpillai.currencyconverter.MainActivity">
+
+    <ImageView
+        android:id="@+id/currencyImageView"
+        android:contentDescription="@string/app_name"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:scaleType="centerCrop"
+        app:srcCompat="@drawable/currency" />
+
+    <android.support.v7.widget.AppCompatEditText
+        android:id="@+id/dollarAmountEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/currencyImageView"
+        android:layout_margin="8dp"
+        android:paddingTop="24dp"
+        android:hint="Enter Amount in Dollars" />
+
+    <Button
+        android:id="@+id/convertButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/dollarAmountEditText"
+        android:layout_margin="8dp"
+        android:onClick="convertCurrency"
+        android:padding="20dp"
+        android:text="CONVERT!" />
+
+    <TextView
+        android:id="@+id/convertedCurrencyTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/convertButton"
+        android:paddingTop="30dp"
+        android:layout_centerHorizontal="true"
+        android:textAlignment="center"
+        android:textSize="32sp" />
+
+</RelativeLayout>
